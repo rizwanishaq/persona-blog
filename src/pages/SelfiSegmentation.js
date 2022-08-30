@@ -94,6 +94,7 @@ const SelfiSegmentation = () => {
           zindex: 9,
           width: 640,
           height: 480,
+          objectPosition: "center",
         }}
       />
 
@@ -109,6 +110,7 @@ const SelfiSegmentation = () => {
           zindex: 9,
           width: 640,
           height: 480,
+          objectPosition: "center",
         }}
       />
     </Container>

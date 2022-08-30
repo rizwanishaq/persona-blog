@@ -114,7 +114,6 @@ const FaceDetection = () => {
     <Container className="mt-2 text-center">
       <Webcam
         ref={webcamRef}
-        className="mt-2 text-center"
         style={{
           position: "absolute",
           marginLeft: "auto",
@@ -130,8 +129,13 @@ const FaceDetection = () => {
 
       <canvas
         ref={canvasRef}
-        className="text-center"
         style={{
+          container: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "auto",
+          },
           position: "absolute",
           marginLeft: "auto",
           marginRight: "auto",
