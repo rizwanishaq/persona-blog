@@ -14,9 +14,11 @@ const ImageCapture = () => {
   useEffect(() => {}, []);
 
   return (
-    <Container>
+    <Container className="text-center">
       <Webcam ref={webcamRef} screenshotFormat="image/jpeg" />
-      <Button onClick={capture}>Capture photo</Button>
+      <div>
+        <Button onClick={capture}>Capture photo</Button>
+      </div>
       {imgSrc && <img src={imgSrc} alt="captured" />}
     </Container>
   );

@@ -19,7 +19,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/machinelearning" element={<MachineLearning />} />
-
         <Route path="/voicecontrolsystem" element={<VoiceAssistant />} />
         <Route path="/pitchdetection" element={<PitchDetection />} />
         <Route path="/eventdetection" element={<EventDetection />} />
