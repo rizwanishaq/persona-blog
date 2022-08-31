@@ -39,7 +39,7 @@ const Header = () => {
               NodeJs
             </Link>
             <Link
-              to="#"
+              to="/reactjs"
               className="link mx-15 color-main"
               style={{ color: "inherit", textDecoration: "inherit" }}
             >

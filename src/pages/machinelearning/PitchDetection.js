@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
-import ProcessAudio from "../components/PitchDetection/ProcessAudio";
+import ProcessAudio from "../../components/PitchDetection/ProcessAudio";
 import { Container, Spinner, Row, Col } from "react-bootstrap";
 import { FaMicrophoneAlt, FaMicrophoneSlash } from "react-icons/fa";
-import ShowPitch from "../components/PitchDetection/ShowPitch";
+import ShowPitch from "../../components/PitchDetection/ShowPitch";
 
 const PitchDetection = () => {
   const MODEL_URL = "https://tfhub.dev/google/tfjs-model/spice/1/default/1";

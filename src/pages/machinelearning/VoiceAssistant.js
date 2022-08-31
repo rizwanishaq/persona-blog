@@ -7,7 +7,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 import { FaMicrophoneAlt, FaMicrophoneSlash } from "react-icons/fa";
-import VoiceNote from "../components/VoiceNote/VoiceNote";
+import VoiceNote from "../../components/VoiceNote/VoiceNote";
 
 const VoiceAssistant = () => {
   const {

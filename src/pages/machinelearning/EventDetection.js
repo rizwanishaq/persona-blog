@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
 import { Container, Spinner, Row, Col } from "react-bootstrap";
 import { FaMicrophoneAlt, FaMicrophoneSlash } from "react-icons/fa";
-import ProcessAudio from "../components/EventDetection/ProcessAudio";
+import ProcessAudio from "../../components/EventDetection/ProcessAudio";
 
 const EventDetection = () => {
   //   Constant for APP
