@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
+// Note: Require the cpu and webgl backend and add them to package.json as peer dependencies.
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 
 import { Container } from "react-bootstrap";

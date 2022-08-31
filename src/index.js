@@ -9,7 +9,7 @@ import "./index.css";
 import App from "./App";
 
 import ExpenseTrackerContextProvider from "./contexts/expensetracker/ExpenseTrackerContext";
-
+import LocationContextProvider from "./contexts/location/LocationContext";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
@@ -18,10 +18,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <ToastContainer />
-    <QueryClientProvider client={queryClient}>
-      <ExpenseTrackerContextProvider>
-        <App />
-      </ExpenseTrackerContextProvider>
-    </QueryClientProvider>
+    <LocationContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <ExpenseTrackerContextProvider>
+          <App />
+        </ExpenseTrackerContextProvider>
+      </QueryClientProvider>
+    </LocationContextProvider>
   </BrowserRouter>
 );

@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
+import { useLocation } from "../../hooks/useLocation";
+import Image from "react-bootstrap/Image";
 
 const Header = () => {
+  const { location } = useLocation();
+
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDate(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <Nav className="pt-30 pb-30 bg-light lh-40 text-center navigation_8">
       <div className="container px-xl-0">
@@ -47,20 +59,21 @@ const Header = () => {
             </Link>
           </div>
           <div className="mt-10 mt-lg-0 col-lg-3 text-lg-right">
-            <Link
-              to="#"
-              className="link mr-30 color-main"
-              style={{ color: "inherit", textDecoration: "inherit" }}
-            >
-              Login
-            </Link>
-            <Link
-              to="#"
-              className="btn sm border-gray color-main f-16"
-              style={{ color: "inherit", textDecoration: "inherit" }}
-            >
-              Sign Up
-            </Link>
+            {location.temperature && location.weather && (
+              <Link
+                to="#"
+                className="link mr-30 color-main"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                {location.city.length > 0 ? `${location.city} ` : ""}
+                {location.weather ? (
+                  <Image src={location.weather.icon} />
+                ) : (
+                  ""
+                )}{" "}
+                {Math.ceil(location.temperature.temp)}&deg;
+              </Link>
+            )}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/layout/Footer";
+// import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import Home from "./pages/Home";
 import MachineLearning from "./pages/MachineLearning";
@@ -20,6 +20,7 @@ import CovidTracker from "./pages/reactjsdemos/CovidTracker";
 import ExpenseTracker from "./pages/reactjsdemos/ExpenseTracker";
 import UploadImage from "./pages/reactjsdemos/UploadImage";
 import ReactJs from "./pages/ReactJs";
+// import TextToxcity from "./pages/machinelearning/TextToxcity";
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
 
         <Route path="/usewebsocketexample" element={<UseWebSocketExample />} />
         <Route path="/videoframes" element={<VideoFrames />} />
+        {/* <Route path="//toxicityclassifier" element={<TextToxcity />} /> */}
       </Routes>
       {/* <Footer /> */}
     </>
