@@ -12,7 +12,7 @@ const ReactJs = () => {
           <Col className="text-center" xl={8} lg={10}>
             <h2 className="mb-25 small">ReactJs Demos</h2>
             <div className="mb-60 f-22 color-heading text-adaptive description">
-              Very simple and small application using the reactjs library
+              Very simple and small applications using the reactjs library
             </div>
           </Col>
         </Row>
