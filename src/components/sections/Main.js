@@ -1,64 +1,73 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const Main = () => {
   return (
     <section className="pt-100 pb-100 bg-light application_21">
-      <div className="container px-xl-0">
-        <div className="mb-md-5 row justify-content-between align-items-center align-items-xl-start">
-          <div className="col-md-7 col-xl-6">
+      <Container className="px-xl-0">
+        <Row
+          className="mb-5 justify-content-between align-items-center align-items-xl-start"
+          md={5}
+        >
+          <Col md={7} xl={6}>
             <div className="pb-15 color-heading f-22 medium op-7">
-              <div>Full Stack AI Engineer</div>
+              <div>Full Stack AI Solutions</div>
             </div>
             <h2 className="text-adaptive">
-              My Expertise from fullstack AI is here to guide you
+              Our expertise with full stack ai is here to guide you.
             </h2>
-          </div>
-          <div className="col-md-5 col-xl-6">
+          </Col>
+          <Col md={5} xl={6}>
             <img
               src="i/application_21_img_1.png"
               srcSet="i/application_21_img_1@2x.png 2x"
               alt=""
               className="img-fluid mt-30 mt-md-0"
             />
-          </div>
-        </div>
-        <div className="mt-20 mt-md-0 row">
-          <div className="mt-30 col-md-4 no-gutters">
-            <div className="pb-10 color-heading f-14 bold text-uppercase sp-20">
-              01
-            </div>
+          </Col>
+        </Row>
+        <Row className="mt-20 mt-0" md={0}>
+          <Col className="mt-30 no-gutters" md={4}>
             <div className="pb-15 color-main f-32 bold">
               Artificial Intelligence
             </div>
-            <div className="col-xl-9 color-heading f-18 medium op-7 text-adaptive">
+            <Col
+              className="color-heading f-18 medium op-7 text-adaptive"
+              xl={9}
+            >
               {" "}
               <div>
-                From data collection to model training with tensorflow/pytorch
+                We provide state of the art solutions for AI applications.
               </div>
-            </div>
-          </div>
-          <div className="mt-30 col-md-4 no-gutters">
-            <div className="pb-10 color-heading f-14 bold text-uppercase sp-20">
-              02
-            </div>
-            <div className="pb-15 color-main f-32 bold">ReactJs</div>
-            <div className="col-xl-9 color-heading f-18 medium op-7 text-adaptive">
+            </Col>
+          </Col>
+          <Col className="mt-30 no-gutters" md={4}>
+            <div className="pb-15 color-main f-32 bold">MERN Stack</div>
+            <Col
+              className="color-heading f-18 medium op-7 text-adaptive"
+              xl={9}
+            >
               {" "}
-              <div>Front-end with Reactjs</div>
-            </div>
-          </div>
-          <div className="mt-30 col-md-4 no-gutters">
-            <div className="pb-10 color-heading f-14 bold text-uppercase sp-20">
-              03
-            </div>
-            <div className="pb-15 color-main f-32 bold">Back End</div>
-            <div className="col-xl-9 color-heading f-18 medium op-7 text-adaptive">
+              <div>
+                We provide complete web based solution using MERN (Mongo,
+                Express, React, and Nodejs) stack
+              </div>
+            </Col>
+          </Col>
+          <Col className="mt-30 no-gutters" md={4}>
+            <div className="pb-15 color-main f-32 bold">Python</div>
+            <Col
+              className="color-heading f-18 medium op-7 text-adaptive"
+              xl={9}
+            >
               {" "}
-              <div>Back-end also with nodejs</div>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div>We are best with Python based solutions</div>
+            </Col>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

@@ -25,25 +25,18 @@ const Header = () => {
               Machine Learning
             </Link>
             <Link
+              to="/reactjs"
+              className="link mx-15 color-main"
+              style={{ color: "inherit", textDecoration: "inherit" }}
+            >
+              MERN
+            </Link>
+            <Link
               to="#"
               className="link mx-15 color-main"
               style={{ color: "inherit", textDecoration: "inherit" }}
             >
               Python
-            </Link>
-            <Link
-              to="#"
-              className="link mx-15 color-main"
-              style={{ color: "inherit", textDecoration: "inherit" }}
-            >
-              NodeJs
-            </Link>
-            <Link
-              to="/reactjs"
-              className="link mx-15 color-main"
-              style={{ color: "inherit", textDecoration: "inherit" }}
-            >
-              ReactJs
             </Link>
             <Link
               to="#"
