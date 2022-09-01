@@ -35,7 +35,6 @@ const ProcessAudio = ({ labels, model, top5, setTop5 }) => {
 
     processor.onaudioprocess = async (e) => {
       const inputData = e.inputBuffer.getChannelData(0);
-      console.log(audioContext.current.sampleRate);
       const downsampledBuffer = downsampleBuffer(
         inputData,
         audioContext.current.sampleRate,
