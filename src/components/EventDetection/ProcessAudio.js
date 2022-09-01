@@ -16,7 +16,6 @@ const ProcessAudio = ({ labels, model, top5, setTop5 }) => {
   const handleSuccess = (stream) => {
     audioContext.current = new AudioContext({
       latencyHint: "playback",
-      sampleRate: MODEL_SAMPLE_RATE,
     });
 
     const source = audioContext.current.createMediaStreamSource(stream);
@@ -36,6 +35,7 @@ const ProcessAudio = ({ labels, model, top5, setTop5 }) => {
 
     processor.onaudioprocess = async (e) => {
       const inputData = e.inputBuffer.getChannelData(0);
+      console.log(audioContext.current.sampleRate);
       const downsampledBuffer = downsampleBuffer(
         inputData,
         audioContext.current.sampleRate,
