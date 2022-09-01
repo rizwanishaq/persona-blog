@@ -97,20 +97,14 @@ const ObjectDetection = () => {
           right: 0,
           textAlign: "center",
           zindex: 9,
-          width: 640,
-          height: 480,
+          width: "100%",
+          height: "auto",
         }}
       />
 
       <canvas
         ref={canvasRef}
         style={{
-          container: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "auto",
-          },
           position: "absolute",
           marginLeft: "auto",
           marginRight: "auto",
@@ -118,8 +112,8 @@ const ObjectDetection = () => {
           right: 0,
           textAlign: "center",
           zindex: 9,
-          width: 640,
-          height: 480,
+          width: "100%",
+          height: "auto",
         }}
       />
     </Container>

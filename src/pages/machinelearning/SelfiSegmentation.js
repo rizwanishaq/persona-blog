@@ -92,9 +92,8 @@ const SelfiSegmentation = () => {
           right: 0,
           textAlign: "center",
           zindex: 9,
-          width: 640,
-          height: 480,
-          objectPosition: "center",
+          width: "100%",
+          height: "auto",
         }}
       />
 
@@ -108,9 +107,8 @@ const SelfiSegmentation = () => {
           right: 0,
           textAlign: "center",
           zindex: 9,
-          width: 640,
-          height: 480,
-          objectPosition: "center",
+          width: "100%",
+          height: "auto",
         }}
       />
     </Container>
