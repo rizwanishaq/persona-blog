@@ -103,8 +103,8 @@ const FaceDetection = () => {
         onFrame: async () => {
           await faceMesh.send({ image: webcamRef.current.video });
         },
-        width: 640,
-        height: 480,
+        width: webcamRef.current.video.videoWidth,
+        height: webcamRef.current.video.videoHeight,
       });
       camera.start();
     }

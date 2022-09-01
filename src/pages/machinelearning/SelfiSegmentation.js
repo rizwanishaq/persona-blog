@@ -73,8 +73,8 @@ const SelfiSegmentation = () => {
         onFrame: async () => {
           await selfieSegmentation.send({ image: webcamRef.current.video });
         },
-        width: 640,
-        height: 480,
+        width: webcamRef.current.video.videoWidth,
+        height: webcamRef.current.video.videoHeight,
       });
       camera.start();
     }
