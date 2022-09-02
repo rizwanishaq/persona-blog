@@ -1,5 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import Markdown from "react-markdown";
+import Card from "react-bootstrap/Card";
 
 const MemCached = () => {
   return (
@@ -107,14 +109,52 @@ const MemCached = () => {
       </p>
       <code className="sourceCode bash">$ touch index.js</code>
       <p>and write the following lines in index.js</p>
-      <img src="i/code.png" alt="code" className="img-fluid mt-30 mt-md-0" />
+      <Card className="mt-2 mb-4">
+        <Card.Body>
+          <Card.Text>
+            <Markdown>{`
+  \`\`\`js
+  // index.js
+  const os = require("os");
+  const MEMCACHED = require("memcached");
+  const serverPool = new MEMCACHED([\`\${os.hostname()}:11211\`]);
+
+  const write = () => {
+    // writing to the memcached server
+    serverPool.set("foo", "bar", 3600, (error) => {
+      if (error) {
+        console.log(error);
+      }
+    });
+  };
+  
+  // we first write the data to the memcached server
+  write();
+  
+  const read = () => {
+    // read the data from the memcached server
+    serverPool.get("foo", (error, data) => {
+      if (error) {
+        console.log(error);
+      }
+      console.log(data);
+    });
+  };
+  
+  // After writing we will read the data from the memcached server
+  read();
+  \`\`\`
+  `}</Markdown>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+
       <p>
         In the code above we first bring the packages, which are os and
         memcached, and then we connected to the cluster which is connected to
         the hostname:11211
       </p>
-
-      <code class="sourceCode bash">
+      <code className="sourceCode bash">
         const serverPool = new MEMCACHED(os.hostname():11211)
       </code>
       <p>
@@ -122,7 +162,7 @@ const MemCached = () => {
         server, while read function read the foo key and subsequently we will
         have bar value. Running the index.js file using the following command
       </p>
-      <code class="sourceCode bash">$ node index.js</code>
+      <code className="sourceCode bash">$ node index.js</code>
       <p>we will have the output bar.</p>
       <p>
         Hope this simple example, will show how to use memcached in our nodejs
