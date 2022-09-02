@@ -51,7 +51,7 @@ const Header = () => {
               Python
             </Link>
             <Link
-              to="#"
+              to="/blogs"
               className="link ml-15 color-main"
               style={{ color: "inherit", textDecoration: "inherit" }}
             >

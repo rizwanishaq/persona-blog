@@ -20,6 +20,8 @@ import CovidTracker from "./pages/reactjsdemos/CovidTracker";
 import ExpenseTracker from "./pages/reactjsdemos/ExpenseTracker";
 import UploadImage from "./pages/reactjsdemos/UploadImage";
 import ReactJs from "./pages/ReactJs";
+import Blogs from "./pages/Blogs";
+import MemCached from "./pages/blogs/MemCached";
 // import TextToxcity from "./pages/machinelearning/TextToxcity";
 
 const App = () => {
@@ -28,6 +30,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/machinelearning" element={<MachineLearning />} />
         <Route path="/voicecontrolsystem" element={<VoiceAssistant />} />
         <Route path="/pitchdetection" element={<PitchDetection />} />
@@ -47,7 +50,7 @@ const App = () => {
 
         <Route path="/usewebsocketexample" element={<UseWebSocketExample />} />
         <Route path="/videoframes" element={<VideoFrames />} />
-        {/* <Route path="//toxicityclassifier" element={<TextToxcity />} /> */}
+        <Route path="/memcached" element={<MemCached />} />
       </Routes>
       {/* <Footer /> */}
     </>
