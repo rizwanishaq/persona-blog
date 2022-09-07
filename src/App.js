@@ -23,6 +23,7 @@ import ReactJs from "./pages/ReactJs";
 import Blogs from "./pages/Blogs";
 import MemCached from "./pages/blogs/MemCached";
 import SimpleSVG from "./pages/d3example/SimpleSVG";
+import ReactSpring from "./pages/reactjsdemos/ReactSpring";
 // import TextToxcity from "./pages/machinelearning/TextToxcity";
 
 const App = () => {
@@ -52,7 +53,8 @@ const App = () => {
         <Route path="/usewebsocketexample" element={<UseWebSocketExample />} />
         <Route path="/videoframes" element={<VideoFrames />} />
         <Route path="/memcached" element={<MemCached />} />
-        <Route path="//d3example" element={<SimpleSVG />} />
+        <Route path="/d3example" element={<SimpleSVG />} />
+        <Route path="/reactspring" element={<ReactSpring />} />
       </Routes>
       {/* <Footer /> */}
     </>
