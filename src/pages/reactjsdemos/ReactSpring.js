@@ -73,26 +73,24 @@ const ReactSpring = () => {
   );
   return (
     <Container>
-      <Card>
-        <animated.div
-          ref={domTarget}
-          style={{
-            transform: "perspective(600px)",
-            x,
-            y,
-            scale: to([scale, zoom], (s, z) => s + z),
-            rotateX,
-            rotateY,
-            rotateZ,
-          }}
-        >
-          <animated.div style={{ transform: wheelY.to(wheel) }}>
-            {imgs.map((img, i) => (
-              <div key={i} style={{ backgroundImage: `url(${img})` }} />
-            ))}
-          </animated.div>
+      <animated.div
+        ref={domTarget}
+        style={{
+          transform: "perspective(600px)",
+          x,
+          y,
+          scale: to([scale, zoom], (s, z) => s + z),
+          rotateX,
+          rotateY,
+          rotateZ,
+        }}
+      >
+        <animated.div style={{ transform: wheelY.to(wheel) }}>
+          {imgs.map((img, i) => (
+            <div key={i} style={{ backgroundImage: `url(${img})` }} />
+          ))}
         </animated.div>
-      </Card>
+      </animated.div>
     </Container>
   );
 };

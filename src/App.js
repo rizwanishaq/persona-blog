@@ -24,7 +24,6 @@ import Blogs from "./pages/Blogs";
 import MemCached from "./pages/blogs/MemCached";
 import SimpleSVG from "./pages/d3example/SimpleSVG";
 import ReactSpring from "./pages/reactjsdemos/ReactSpring";
-// import TextToxcity from "./pages/machinelearning/TextToxcity";
 
 const App = () => {
   return (
