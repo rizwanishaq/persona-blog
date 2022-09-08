@@ -3,11 +3,22 @@ import Item from "../components/common/Item";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import backgroundImage from "./machinelearning/backgroundimage.png";
 
 const MachineLearning = () => {
   return (
     <section className="pt-105 pb-70 bg-light feature_45">
-      <Container className="px-xl-0">
+      <Container
+        className="px-xl-0"
+        // style={{
+        //   backgroundImage: `url(${backgroundImage}`,
+        //   backgroundSize: "cover",
+        //   width: "100%",
+        //   height: "100%",
+        //   backgroundColor:
+        //     "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))",
+        // }}
+      >
         <Row className="justify-content-center">
           <Col className="text-center" xl={8} lg={10}>
             <h2 className="mb-25 small">Machine Learning Demos</h2>

@@ -32,6 +32,18 @@ const Blogs = () => {
           <Col className="mt-10">
             <Row className="justify-content-center text-center text-md-left">
               <Item
+                key={"gRPC"}
+                title={"gRPC Series"}
+                description={"gRPC series - part 1"}
+                link={"/grpc1"}
+              />
+            </Row>
+          </Col>
+        </Row>
+        <Row className="justify-content-center justify-content-md-between no-gutters">
+          <Col className="mt-10">
+            <Row className="justify-content-center text-center text-md-left">
+              <Item
                 key={"D3Example"}
                 title={"D3Example"}
                 description={"Expermenting with d3 and reactjs"}
