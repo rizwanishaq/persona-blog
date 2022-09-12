@@ -3,11 +3,12 @@ import axios from "axios";
 
 // Ref: https://www.pakainfo.com/get-location-name-from-latitude-and-longitude-javascript/
 // Ref: https://fcc-weather-api.glitch.me/
+// Ref: https://geolocation-db.com/json/
 
 export const LocationContext = createContext();
 
 const LocationContextProvider = ({ children }) => {
-  const baseURL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
+  // const baseURL = "https://api.bigdatacloud.net/data/reverse-geocode-client"; //more informative
   const weatherUrl = "https://fcc-weather-api.glitch.me/api/current?";
 
   const [location, setLocation] = useState({
@@ -22,23 +23,19 @@ const LocationContextProvider = ({ children }) => {
   });
 
   const success = async (position) => {
-    const response = await axios.get(
-      `${baseURL}?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`
-    );
-
     const weatherResponse = await axios.get(
-      `${weatherUrl}lat=${position.coords.latitude}&lon=${position.coords.longitude}`
+      `${weatherUrl}lat=${position.latitude}&lon=${position.longitude}`
     );
 
     const { main, weather } = weatherResponse.data;
+    console.log(position);
 
-    const { city, countryName } = await response.data;
     setLocation({
-      city,
-      country: countryName,
+      city: position.city,
+      country: position.country_name,
       error: "",
-      latitude: position.coords.latitude,
-      longitude: position.coords.longitude,
+      latitude: position.latitude,
+      longitude: position.longitude,
       status: "success",
       temperature: main,
       weather: weather.length > 0 ? weather[0] : {},
@@ -58,18 +55,17 @@ const LocationContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (!navigator.geolocation) {
-      setLocation({
-        ...location,
-        status: "Geolocation is not supported by your browser",
-      });
-    } else {
-      navigator.geolocation.getCurrentPosition(success, error, {
-        enableHighAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0,
-      });
-    }
+    const getLocation = async () => {
+      try {
+        const response = await axios.get("https://geolocation-db.com/json/");
+        const position = response.data;
+        success(position);
+      } catch (err) {
+        error(err);
+      }
+    };
+
+    getLocation();
   }, []);
 
   return (

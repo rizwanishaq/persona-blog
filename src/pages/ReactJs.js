@@ -78,6 +78,12 @@ const ReactJs = () => {
                 description={"How to React Spring"}
                 link={"/reactspring"}
               />
+              <Item
+                key={"TeamAllocation"}
+                title={"TeamAllocatin"}
+                description={"Team allocation demo"}
+                link={"/teamallocation"}
+              />
             </Row>
           </Col>
         </Row>

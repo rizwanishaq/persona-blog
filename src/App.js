@@ -25,6 +25,7 @@ import MemCached from "./pages/blogs/MemCached";
 import SimpleSVG from "./pages/d3example/SimpleSVG";
 import ReactSpring from "./pages/reactjsdemos/ReactSpring";
 import GrpcSeriesPart1 from "./pages/blogs/GrpcSeriesPart1";
+import TeamAllocation from "./pages/teams/TeamAllocation";
 
 const App = () => {
   return (
@@ -56,6 +57,7 @@ const App = () => {
         <Route path="/d3example" element={<SimpleSVG />} />
         <Route path="/reactspring" element={<ReactSpring />} />
         <Route path="/grpc1" element={<GrpcSeriesPart1 />} />
+        <Route path="/teamallocation" element={<TeamAllocation />} />
       </Routes>
       {/* <Footer /> */}
     </>

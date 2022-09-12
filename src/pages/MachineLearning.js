@@ -12,9 +12,8 @@ const MachineLearning = () => {
         className="px-xl-0"
         // style={{
         //   backgroundImage: `url(${backgroundImage}`,
-        //   backgroundSize: "cover",
-        //   width: "100%",
-        //   height: "100%",
+        //   backgroundSize: "contain",
+        //   backgroundRepeat: "no-repeat",
         //   backgroundColor:
         //     "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5))",
         // }}
