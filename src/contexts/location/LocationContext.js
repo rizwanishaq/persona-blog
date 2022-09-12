@@ -60,9 +60,7 @@ const LocationContextProvider = ({ children }) => {
   useEffect(() => {
     const getLocation = async () => {
       try {
-        const response = await axios.get(
-          "https://api.bigdatacloud.net/data/reverse-geocode-client"
-        );
+        const response = await axios.get("https://geolocation-db.com/json/");
         const position = response.data;
         success(position);
       } catch (err) {
