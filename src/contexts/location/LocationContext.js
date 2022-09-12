@@ -29,7 +29,6 @@ const LocationContextProvider = ({ children }) => {
       );
 
       const { main, weather } = weatherResponse.data;
-      console.log(position);
 
       setLocation({
         city: position.city,
