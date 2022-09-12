@@ -78,6 +78,12 @@ const ReactJs = () => {
                 description={"How to React Spring"}
                 link={"/reactspring"}
               />
+              <Item
+                key={"CryptoTrack"}
+                title={"CryptoTrack"}
+                description={"Tracking Crypto"}
+                link={"/cryptotrack"}
+              />
             </Row>
           </Col>
         </Row>
