@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import { useQuery } from "react-query";
-import Coin from "../../components/crypto/Coin";
-import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import CryptoCard from "../../components/crypto/CryptoCard";
 
 const CryptoTrack = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -41,13 +40,10 @@ const CryptoTrack = () => {
           />
         </InputGroup>
       </Form>
-      <Table responsive>
-        <tbody>
-          {searchResults.map((coin) => (
-            <Coin key={coin.name} coin={coin} />
-          ))}
-        </tbody>
-      </Table>
+
+      {searchResults.map((coin) => (
+        <CryptoCard key={coin.name} coin={coin} />
+      ))}
     </Container>
   );
 };
