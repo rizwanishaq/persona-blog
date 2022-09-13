@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import { useQuery } from "react-query";
 import Coin from "../../components/crypto/Coin";
+import Table from "react-bootstrap/Table";
 
 const CryptoTrack = () => {
   const [search, setSearch] = useState("");
@@ -18,10 +19,14 @@ const CryptoTrack = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <Container>
-      {data.map((coin) => (
-        <Coin key={coin.name} coin={coin} />
-      ))}
+    <Container className="mt-2 text-center">
+      <Table responsive="md">
+        <tbody>
+          {data.map((coin) => (
+            <Coin key={coin.name} coin={coin} />
+          ))}
+        </tbody>
+      </Table>
     </Container>
   );
 };
