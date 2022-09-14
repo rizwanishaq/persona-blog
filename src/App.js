@@ -26,6 +26,7 @@ import SimpleSVG from "./pages/d3example/SimpleSVG";
 import ReactSpring from "./pages/reactjsdemos/ReactSpring";
 import GrpcSeriesPart1 from "./pages/blogs/GrpcSeriesPart1";
 import CryptoTrack from "./pages/reactjsdemos/CryptoTrack";
+import ReactTable from "./pages/reactjsdemos/ReactTable";
 
 const App = () => {
   return (
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/reactspring" element={<ReactSpring />} />
         <Route path="/grpc1" element={<GrpcSeriesPart1 />} />
         <Route path="/cryptotrack" element={<CryptoTrack />} />
+        <Route path="/reacttable" element={<ReactTable />} />
       </Routes>
       {/* <Footer /> */}
     </>

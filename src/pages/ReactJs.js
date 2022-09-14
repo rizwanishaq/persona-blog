@@ -84,6 +84,12 @@ const ReactJs = () => {
                 description={"Tracking Crypto"}
                 link={"/cryptotrack"}
               />
+              <Item
+                key={"ReactTable"}
+                title={"ReactTable"}
+                description={"ReactTable"}
+                link={"/reacttable"}
+              />
             </Row>
           </Col>
         </Row>
