@@ -116,11 +116,11 @@ const FaceDetection = () => {
         ref={webcamRef}
         style={{
           position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
+          // marginLeft: "auto",
+          // marginRight: "auto",
           left: 0,
           right: 0,
-          textAlign: "center",
+          // textAlign: "center",
           zindex: 9,
           width: "100%",
           height: "auto",
@@ -131,11 +131,11 @@ const FaceDetection = () => {
         ref={canvasRef}
         style={{
           position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
+          // marginLeft: "auto",
+          // marginRight: "auto",
           left: 0,
           right: 0,
-          textAlign: "center",
+          // textAlign: "center",
           zindex: 9,
           width: "100%",
           height: "auto",
