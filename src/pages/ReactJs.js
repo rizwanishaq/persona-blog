@@ -90,6 +90,12 @@ const ReactJs = () => {
                 description={"ReactTable"}
                 link={"/reacttable"}
               />
+              <Item
+                key={"UseQueryExample"}
+                title={"UseQueryExample"}
+                description={"UseQuery Example"}
+                link={"/useQueryexample"}
+              />
             </Row>
           </Col>
         </Row>
