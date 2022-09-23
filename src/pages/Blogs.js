@@ -52,6 +52,18 @@ const Blogs = () => {
             </Row>
           </Col>
         </Row>
+        <Row className="justify-content-center justify-content-md-between no-gutters">
+          <Col className="mt-10">
+            <Row className="justify-content-center text-center text-md-left">
+              <Item
+                key={"WhisperASR"}
+                title={"WhisperASR"}
+                description={"Expermenting Openai Whisper ASR model"}
+                link={"/whisperasr"}
+              />
+            </Row>
+          </Col>
+        </Row>
       </Container>
     </section>
   );
