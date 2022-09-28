@@ -1,55 +1,38 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import * as d3 from "d3";
+import { line, scaleLinear } from "d3";
+
+// Ref : https://tomhazledine.com/line-graphs-with-react-svg-d3/
 
 const AudioSpectrum = () => {
-  const [data, setData] = useState([]);
-  const ref = useRef();
-  const height = 400;
-  const width = 600;
+  const [data, setData] = useState({});
+
+  const layout = {
+    width: 500,
+    height: 200,
+  };
+  const graphDetails = {
+    xScale: scaleLinear().range([0, layout.width]),
+    yScale: scaleLinear().range([layout.height, 0]),
+    lineGenerator: line(),
+  };
+
+  graphDetails.xScale.domain([0, data.length - 1]);
+  graphDetails.yScale.domain([0, 280]);
+
+  graphDetails.lineGenerator.x((d) => graphDetails.xScale(d["x"]));
+  graphDetails.lineGenerator.y((d) => graphDetails.yScale(d["y"]));
+
+  const [lineData, setLineData] = useState(() =>
+    graphDetails.lineGenerator(data)
+  );
 
   useEffect(() => {
-    const svg = d3
-      .select(ref.current)
-      .attr("width", width)
-      .attr("height", height)
-      .style("border", "1px solid black");
-  }, []);
-
-  useEffect(() => {
-    const svg = d3.select(ref.current);
-    var selection = svg.selectAll("rect").data(data);
-    var yScale = d3
-      .scaleLinear()
-      .domain([0, d3.max(data)])
-      .range([0, height - 100]);
-
-    selection
-      .transition()
-      //   .duration(300)
-      .attr("height", (d) => yScale(d))
-      .attr("y", (d) => height - yScale(d));
-
-    selection
-      .enter()
-      .append("rect")
-      .attr("x", (d, i) => i * 45)
-      .attr("y", (d) => height)
-      .attr("width", 40)
-      .attr("height", 0)
-      .attr("fill", "orange")
-      .transition()
-      //   .duration(300)
-      .attr("height", (d) => yScale(d))
-      .attr("y", (d) => height - yScale(d));
-
-    selection
-      .exit()
-      .transition()
-      //   .duration(300)
-      .attr("y", (d) => height)
-      .attr("height", 0)
-      .remove();
+    if (data) {
+      // Calculate the data line
+      const newLine = graphDetails.lineGenerator(data);
+      setLineData(newLine);
+    }
   }, [data]);
 
   useEffect(() => {
@@ -69,7 +52,9 @@ const AudioSpectrum = () => {
       const update = () => {
         analyzer.getByteFrequencyData(dataArray);
         const orig = Array.from(dataArray);
-        setData(orig.flat());
+        const duplicate = [[...orig].reverse(), orig].flat();
+        const cleanData = duplicate.map((item, i) => ({ x: i, y: item }));
+        setData(cleanData);
         requestAnimationFrame(update);
       };
       requestAnimationFrame(update);
@@ -78,8 +63,16 @@ const AudioSpectrum = () => {
   }, []);
 
   return (
-    <Container>
-      <svg ref={ref}></svg>
+    <Container className="mt-2">
+      <svg
+        style={{ border: "1px solid #dad8d2" }}
+        width={"100%"}
+        height={layout.height}
+        viewBox={`0 0 ${layout.width} ${layout.height}`}
+        preserveAspectRatio="none"
+      >
+        <path style={{ fill: "none", stroke: "#00b7c6" }} d={lineData} />
+      </svg>
     </Container>
   );
 };
