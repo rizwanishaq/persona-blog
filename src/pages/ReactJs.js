@@ -96,6 +96,12 @@ const ReactJs = () => {
                 description={"UseQuery Example"}
                 link={"/useQueryexample"}
               />
+              <Item
+                key={"AudioSpectrum"}
+                title={"AudioSpectrum"}
+                description={"AudioSpectrum Example"}
+                link={"/audiospectrum"}
+              />
             </Row>
           </Col>
         </Row>

@@ -29,6 +29,7 @@ import CryptoTrack from "./pages/reactjsdemos/CryptoTrack";
 import ReactTable from "./pages/reactjsdemos/ReactTable";
 import UseQueryExample from "./pages/reactjsdemos/UseQueryExample";
 import WhisperASR from "./pages/blogs/WhisperASR";
+import AudioSpectrum from "./pages/reactjsdemos/AudioSpectrum";
 
 const App = () => {
   return (
@@ -64,6 +65,7 @@ const App = () => {
         <Route path="/reacttable" element={<ReactTable />} />
         <Route path="/useQueryexample" element={<UseQueryExample />} />
         <Route path="/whisperasr" element={<WhisperASR />} />
+        <Route path="/audiospectrum" element={<AudioSpectrum />} />
       </Routes>
       {/* <Footer /> */}
     </>
