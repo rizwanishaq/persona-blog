@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { line, scaleLinear } from "d3";
 
@@ -6,6 +6,7 @@ import { line, scaleLinear } from "d3";
 
 const AudioSpectrum = () => {
   const [data, setData] = useState({});
+  const audioCtx = useRef(null);
 
   const layout = {
     width: 500,
@@ -29,7 +30,6 @@ const AudioSpectrum = () => {
 
   useEffect(() => {
     if (data) {
-      // Calculate the data line
       const newLine = graphDetails.lineGenerator(data);
       setLineData(newLine);
     }
@@ -41,10 +41,11 @@ const AudioSpectrum = () => {
         video: false,
         audio: true,
       });
-      const audioCtx = new AudioContext();
-      const analyzer = audioCtx.createAnalyser();
+
+      audioCtx.current = new AudioContext();
+      const analyzer = audioCtx.current.createAnalyser();
       analyzer.fftSize = 2048;
-      const audioSrc = audioCtx.createMediaStreamSource(stream);
+      const audioSrc = audioCtx.current.createMediaStreamSource(stream);
       audioSrc.connect(analyzer);
 
       const dataArray = new Uint8Array(analyzer.frequencyBinCount);
@@ -60,6 +61,12 @@ const AudioSpectrum = () => {
       requestAnimationFrame(update);
     };
     startFromFile();
+
+    return () => {
+      audioCtx.current && audioCtx.current.close();
+      console.log("Component unmounted");
+    };
+    // eslint-disable-next-line
   }, []);
 
   return (
