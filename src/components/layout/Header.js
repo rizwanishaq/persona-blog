@@ -53,6 +53,13 @@ const Header = () => {
               Blog
             </Link>
             <Link
+              to="/contactus"
+              className="link ml-15 color-main"
+              style={{ color: "inherit", textDecoration: "inherit" }}
+            >
+              Contact
+            </Link>
+            <Link
               to="#"
               className="link mx-15 color-main"
               style={{ color: "inherit", textDecoration: "inherit" }}

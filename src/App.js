@@ -31,6 +31,7 @@ import UseQueryExample from "./pages/reactjsdemos/UseQueryExample";
 import WhisperASR from "./pages/blogs/WhisperASR";
 import AudioSpectrum from "./pages/reactjsdemos/AudioSpectrum";
 import ReactHookForm from "./pages/reactjsdemos/ReactHookForm";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (
@@ -68,6 +69,7 @@ const App = () => {
         <Route path="/whisperasr" element={<WhisperASR />} />
         <Route path="/audiospectrum" element={<AudioSpectrum />} />
         <Route path="/reacthookform" element={<ReactHookForm />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
       {/* <Footer /> */}
     </>
