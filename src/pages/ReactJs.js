@@ -96,6 +96,12 @@ const ReactJs = () => {
                 description={"AudioSpectrum Example"}
                 link={"/audiospectrum"}
               />
+              <Item
+                key={"ReactHookForm"}
+                title={"ReactHookForm"}
+                description={"ReactHookForm Example"}
+                link={"/reacthookform"}
+              />
             </Row>
           </Col>
         </Row>

@@ -7,14 +7,28 @@ import {
   axisBottom,
   axisLeft,
   scaleBand,
+  pie,
+  arc,
+  scaleOrdinal,
+  schemeSet2,
 } from "d3";
 import Container from "react-bootstrap/Container";
+import { colors } from "@react-spring/shared";
 
 // Ref : https://www.youtube.com/watch?v=10dl-gDJLks
 const SimpleSVG = () => {
   const [data] = useState([25, 50, 35, 15, 94, 10]);
+  const [pieData] = useState([
+    { property: "a", value: 4 },
+    { property: "b", value: 3 },
+    { property: "c", value: 10 },
+    { property: "d", value: 2 },
+    { property: "e", value: 8 },
+  ]);
   const ref = useRef();
   const barRef = useRef();
+  const pieRef = useRef();
+
   const layout = {
     width: 400,
     height: 100,
@@ -95,6 +109,34 @@ const SimpleSVG = () => {
       .attr("height", (val) => layout.height - yScale(val));
   }, [data]);
 
+  useEffect(() => {
+    const radius = layout.width / 4;
+
+    const svgPie = select(pieRef.current)
+      .attr("width", layout.width)
+      .attr("height", layout.height);
+
+    const formattedData = pie().value((d) => d.value)(pieData);
+    const arcGenerator = arc().innerRadius(0).outerRadius(radius);
+    const color = scaleOrdinal().range(schemeSet2);
+
+    svgPie
+      .selectAll()
+      .data(formattedData)
+      .join("path")
+      .attr("d", arcGenerator)
+      .attr("fill", (d) => color(d.value))
+      .style("opacity", 0.7);
+
+    svgPie
+      .selectAll()
+      .data(formattedData)
+      .join("text")
+      .text((d) => d.data.property)
+      .attr("transform", (d) => `translate(${arcGenerator.centroid(d)})`)
+      .style("text-anchor", "middle");
+  }, [pieData]);
+
   return (
     <Container>
       <svg
@@ -116,6 +158,17 @@ const SimpleSVG = () => {
         style={{
           border: "1px solid #dad8d2",
           marginTop: 50,
+          background: "white",
+          overflow: "visible",
+        }}
+        viewBox={`0 0 ${layout.width} ${layout.height}`}
+        preserveAspectRatio="none"
+      />
+      <svg
+        ref={pieRef}
+        style={{
+          // border: "1px solid #dad8d2",
+          marginTop: "400px",
           background: "white",
           overflow: "visible",
         }}
