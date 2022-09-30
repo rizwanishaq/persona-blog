@@ -37,7 +37,7 @@ const ContactUs = () => {
   };
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4  mb-4">
       <h1>Contact Us</h1>
       <p>
         {" "}
@@ -50,7 +50,7 @@ const ContactUs = () => {
           <Form.Control
             type="text"
             placeholder="Enter name"
-            {...register("name", {
+            {...register("user_name", {
               required: true,
               maxLength: 80,
             })}
@@ -68,7 +68,7 @@ const ContactUs = () => {
           <Form.Control
             type="email"
             placeholder="Email"
-            {...register("email", {
+            {...register("user_email", {
               required: true,
               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
             })}
@@ -78,18 +78,6 @@ const ContactUs = () => {
               {errors.email.type === "required" && "This field is required."}
               {errors.email.type === "pattern" && "InValid email"}
             </span>
-          )}
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Label>Phone</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Phone Number"
-            {...register("phoneNumber")}
-          />
-          {errors.phoneNumber && (
-            <span className="text-danger">Invalid phone number</span>
           )}
         </Form.Group>
 
