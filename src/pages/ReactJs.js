@@ -102,6 +102,18 @@ const ReactJs = () => {
                 description={"ReactHookForm Example"}
                 link={"/reacthookform"}
               />
+              <Item
+                key={"D3Experimentation"}
+                title={"D3Experimentation"}
+                description={"D3Experimentation"}
+                link={"/d3experimentation"}
+              />
+              <Item
+                key={"FireBaseProject1"}
+                title={"FireBaseProject1"}
+                description={"Donut Chart Example"}
+                link={"/donutchart"}
+              />
             </Row>
           </Col>
         </Row>

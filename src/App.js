@@ -32,6 +32,8 @@ import WhisperASR from "./pages/blogs/WhisperASR";
 import AudioSpectrum from "./pages/reactjsdemos/AudioSpectrum";
 import ReactHookForm from "./pages/reactjsdemos/ReactHookForm";
 import ContactUs from "./pages/ContactUs";
+import D3Firebase from "./pages/d3example/D3Firebase";
+import DonutD3 from "./pages/d3example/DonutD3";
 
 const App = () => {
   return (
@@ -70,6 +72,8 @@ const App = () => {
         <Route path="/audiospectrum" element={<AudioSpectrum />} />
         <Route path="/reacthookform" element={<ReactHookForm />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/d3experimentation" element={<D3Firebase />} />
+        <Route path="/donutchart" element={<DonutD3 />} />
       </Routes>
       {/* <Footer /> */}
     </>
