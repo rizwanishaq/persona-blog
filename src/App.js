@@ -35,6 +35,7 @@ import ContactUs from "./pages/ContactUs";
 import D3Firebase from "./pages/d3example/D3Firebase";
 import DonutD3 from "./pages/d3example/DonutD3";
 import AreaD3 from "./pages/d3example/AreaD3";
+import BoxPlot from "./pages/d3example/BoxPlot";
 
 const App = () => {
   return (
@@ -76,6 +77,7 @@ const App = () => {
         <Route path="/d3experimentation" element={<D3Firebase />} />
         <Route path="/donutchart" element={<DonutD3 />} />
         <Route path="/aread3" element={<AreaD3 />} />
+        <Route path="/boxplotd3" element={<BoxPlot />} />
       </Routes>
       {/* <Footer /> */}
     </>

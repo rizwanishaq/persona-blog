@@ -120,6 +120,12 @@ const ReactJs = () => {
                 description={"D3 Area Example"}
                 link={"/aread3"}
               />
+              <Item
+                key={"BoxPlot"}
+                title={"BoxPlot Example"}
+                description={"D3 BoxPlot Example"}
+                link={"/boxplotd3"}
+              />
             </Row>
           </Col>
         </Row>
