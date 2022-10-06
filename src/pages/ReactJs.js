@@ -114,6 +114,12 @@ const ReactJs = () => {
                 description={"Donut Chart Example"}
                 link={"/donutchart"}
               />
+              <Item
+                key={"AreaD3"}
+                title={"AreaD3 Example"}
+                description={"D3 Area Example"}
+                link={"/aread3"}
+              />
             </Row>
           </Col>
         </Row>

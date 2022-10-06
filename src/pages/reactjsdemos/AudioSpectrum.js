@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { line, scaleLinear } from "d3";
+import * as d3 from "d3";
 
 // Ref : https://tomhazledine.com/line-graphs-with-react-svg-d3/
 
 const AudioSpectrum = () => {
   const [data, setData] = useState({});
   const audioCtx = useRef(null);
+  const svgRef = useRef();
 
   const layout = {
     width: 500,

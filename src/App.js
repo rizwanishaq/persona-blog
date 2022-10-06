@@ -34,6 +34,7 @@ import ReactHookForm from "./pages/reactjsdemos/ReactHookForm";
 import ContactUs from "./pages/ContactUs";
 import D3Firebase from "./pages/d3example/D3Firebase";
 import DonutD3 from "./pages/d3example/DonutD3";
+import AreaD3 from "./pages/d3example/AreaD3";
 
 const App = () => {
   return (
@@ -74,6 +75,7 @@ const App = () => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/d3experimentation" element={<D3Firebase />} />
         <Route path="/donutchart" element={<DonutD3 />} />
+        <Route path="/aread3" element={<AreaD3 />} />
       </Routes>
       {/* <Footer /> */}
     </>
