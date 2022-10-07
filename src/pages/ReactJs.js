@@ -126,6 +126,12 @@ const ReactJs = () => {
                 description={"D3 BoxPlot Example"}
                 link={"/boxplotd3"}
               />
+              <Item
+                key={"CountriesInformation"}
+                title={"CountriesInformation Example"}
+                description={"Get the information related to the countries"}
+                link={"/countries"}
+              />
             </Row>
           </Col>
         </Row>
