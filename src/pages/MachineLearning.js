@@ -22,8 +22,8 @@ const MachineLearning = () => {
           <Col className="text-center" xl={8} lg={10}>
             <h2 className="mb-25 small">Machine Learning Demos</h2>
             <div className="mb-60 f-22 color-heading text-adaptive description">
-              These are the most simple machine learning demos available which
-              are made by using reactjs and tensorflowjs.
+              Effortlessly Explore the World of Machine Learning with These
+              User-Friendly Demos Powered by ReactJS and TensorFlowJS!
             </div>
           </Col>
         </Row>
