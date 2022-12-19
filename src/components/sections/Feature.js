@@ -56,10 +56,10 @@ const Feature = () => {
                   Elite Services - 5-Star Quality Guaranteed
                 </div>
                 <div className="color-heading text-adaptive">
-                  Experience the power of our global reach as we expand horizons
-                  and serve clients all over the world, delivering top-notch
-                  services and solutions to a diverse range of industries and
-                  markets.
+                  Our dedication to delivering the highest quality services has
+                  earned us a reputation for excellence, consistently receiving
+                  top ratings and praise from our satisfied clients. Trust in
+                  our 5-star service to exceed your expectations every time.
                 </div>
               </Col>
             </Row>
