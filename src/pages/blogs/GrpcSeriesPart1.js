@@ -94,29 +94,29 @@ const GrpcSeriesPart1 = () => {
         </Card.Body>
       </Card>
       <p>
-        The protocol buffer structure is first we define the syntax which is
-        proto3 in this case, and then we define the package name and we use
-        square.v1 as the name. The we define Request and Response structure for
-        our square service. Once we have protocol buffer file ready we can start
-        using it.
+        The protocol buffer structure begins by defining the syntax, which in
+        this case is proto3. Then, the package name is defined, using
+        "square.v1" as the name. The Request and Response structure for the
+        square service are also defined. Once the protocol buffer file has been
+        prepared, it can be used.
       </p>
       <p>
-        We use Nodejs for writing server and client, before writing we need to
-        set our project using the following steps:
+        Before writing server and client code using Nodejs, we need to follow
+        these steps to set up our project:
       </p>
 
       <code className="sourceCode bash">npm init -y</code>
 
       <p>
-        Once project is setup we install the required dependencies by running
-        the following command on terminal:
+        To install the necessary dependencies for the project, run the following
+        command in the terminal:
       </p>
       <code className="sourceCode bash">
         npm install grpc @grpc/proto-loader
       </code>
       <p>
-        Once installation is finished we are going to write server.js file, and
-        is giving below
+        Once the installation is completed, we will create a file called
+        server.js and it will be as follows:
       </p>
       <h2 id="server-server.js">Server (server.js)</h2>
       <Card className="mt-2 mb-4">
@@ -177,27 +177,23 @@ const GrpcSeriesPart1 = () => {
         </Card.Body>
       </Card>
       <p>
-        In server.js we imported necessary dependencies, then we loaded the
-        protobuf file which is square.proto, and after that we get the service
-        package. As we are going to get a number and it will return the square
-        of the number we have the function square which calculate the square.
-        And after that we created a server and then it is started on
-        localhost:90052.
+        we first imported the necessary dependencies for our server. Then, we
+        loaded the protobuf file, square.proto, which contains the service
+        package we will use to calculate the square of a given number. We
+        created a function called square that performs this calculation.
+        Finally, we created a server and started it on localhost:90052.
       </p>
-      <p>
-        Once the server is ready, we can run the server using the following
-        command:
-      </p>
+      <p>To start the server, use the following command:</p>
 
       <code className="sourceCode bash">node server.js</code>
 
-      <p>and we will have following output:</p>
+      <p>We will then obtain the following output:</p>
 
       <code className="sourceCode bash">Server started on localhost:90052</code>
 
       <p>
-        Once the server is ready, we can write the client side code and is given
-        below
+        Once the server is prepared, we can proceed to write the client-side
+        code, as shown below
       </p>
       <h2 id="client-client.js">Client (client.js)</h2>
       <Card className="mt-2 mb-4">
@@ -250,12 +246,12 @@ const GrpcSeriesPart1 = () => {
       </Card>
 
       <p>
-        We have teh same structure as we have in server.js, except now we are
-        sending request to the server.
+        The structure in this file is the same as in server.js, except that we
+        are now sending requests to the server.
       </p>
       <p>
-        once our client is ready, we can send the request to the server by
-        running the following command on another terminal:
+        Once our client is prepared, we can send the request to the server by
+        running the following command on a separate terminal:
       </p>
       <code className="sourceCode bash">$ node client.js</code>
       <p>and we will have the following output:</p>
