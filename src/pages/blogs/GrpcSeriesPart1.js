@@ -254,7 +254,7 @@ const GrpcSeriesPart1 = () => {
         running the following command on a separate terminal:
       </p>
       <code className="sourceCode bash">$ node client.js</code>
-      <p>and we will have the following output:</p>
+      <p>As a result, we will obtain the following output:</p>
 
       <code className="sourceCode bash">104.0399999999</code>
     </Container>
