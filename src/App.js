@@ -37,6 +37,8 @@ import DonutD3 from "./pages/d3example/DonutD3";
 import AreaD3 from "./pages/d3example/AreaD3";
 import BoxPlot from "./pages/d3example/BoxPlot";
 import CountryInformation from "./pages/reactjsdemos/CountryInformation";
+import ToolTips from "./pages/d3example/ToolTips";
+import ShoppingCart from "./pages/reactjsdemos/ShoppingCart";
 
 const App = () => {
   return (
@@ -80,6 +82,8 @@ const App = () => {
         <Route path="/aread3" element={<AreaD3 />} />
         <Route path="/boxplotd3" element={<BoxPlot />} />
         <Route path="/countries" element={<CountryInformation />} />
+        <Route path="/templatetooltips" element={<ToolTips />} />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
       </Routes>
       {/* <Footer /> */}
     </>

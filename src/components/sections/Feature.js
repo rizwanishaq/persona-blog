@@ -9,10 +9,13 @@ const Feature = () => {
       <Container className="px-xl-0">
         <div className="row justify-content-center">
           <Col className="text-center" xl={8} lg={10}>
-            <h2 className="mb-25 small">Best in Creating projects</h2>
+            <h2 className="mb-25 small">
+              Expertly Crafted Projects - Our Specialty
+            </h2>
             <div className="mb-60 f-22 color-heading text-adaptive description">
-              Whether your goal is to learn full-stack AI, or just develop our
-              state of art projects, we are here to help you
+              Master the art of full-stack AI development or create cutting-edge
+              projects with our expert guidance. Let us help you reach your
+              goals.
             </div>
           </Col>
         </div>
@@ -28,23 +31,35 @@ const Feature = () => {
           <Col className="mt-10" lg={5}>
             <Row className="row justify-content-center text-center text-md-left">
               <Col className="mb-45 block" lg={12} md={4} sm={8}>
-                <div className="mb-15 f-22 title">8+ Years</div>
+                <div className="mb-15 f-22 title">
+                  Decades of Expertise - 8+ Years and Counting
+                </div>
                 <div className="color-heading text-adaptive">
-                  We have more than 10 years of experience with full stack
-                  machine learning projects
+                  Unleash the potential of full stack machine learning with our
+                  decade-long expertise in delivering successful projects.
                 </div>
               </Col>
               <Col className="mb-45 block" lg={12} md={4} sm={8}>
-                <div className="mb-15 f-22 title">20+ Countries</div>
+                <div className="mb-15 f-22 title">
+                  Unleashing the Power of a Global Reach - Serving the World
+                  Wide
+                </div>
                 <div className="color-heading text-adaptive">
-                  Our globally-acclaimed trainings take place in beautiful
-                  destinations around the globe.
+                  Experience the power of our global reach as we expand horizons
+                  and serve clients all over the world, delivering top-notch
+                  services and solutions to a diverse range of industries and
+                  markets.
                 </div>
               </Col>
               <Col className="mb-45 block" lg={12} md={4} sm={8}>
-                <div className="mb-15 f-22 title">5-Star Services</div>
+                <div className="mb-15 f-22 title">
+                  Elite Services - 5-Star Quality Guaranteed
+                </div>
                 <div className="color-heading text-adaptive">
-                  We’re 5 star services provider
+                  Experience the power of our global reach as we expand horizons
+                  and serve clients all over the world, delivering top-notch
+                  services and solutions to a diverse range of industries and
+                  markets.
                 </div>
               </Col>
             </Row>

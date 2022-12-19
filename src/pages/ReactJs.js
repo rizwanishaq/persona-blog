@@ -132,6 +132,18 @@ const ReactJs = () => {
                 description={"Get the information related to the countries"}
                 link={"/countries"}
               />
+              <Item
+                key={"D3TemplateTooltips"}
+                title={"D3TemplateTooltips Example"}
+                description={"D3TemplateTooltips Example"}
+                link={"/templatetooltips"}
+              />
+              <Item
+                key={"ShoppingCart"}
+                title={"ShoppingCart Example"}
+                description={"ShoppingCart Example"}
+                link={"/shoppingcart"}
+              />
             </Row>
           </Col>
         </Row>

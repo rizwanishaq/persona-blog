@@ -13,10 +13,13 @@ const Main = () => {
         >
           <Col md={7} xl={6}>
             <div className="pb-15 color-heading f-22 medium op-7">
-              <div>Full Stack AI Solutions</div>
+              <div>
+                Revolutionary Artificial Intelligence Full-Stack Solutions
+              </div>
             </div>
             <h2 className="text-adaptive">
-              Our expertise with full stack ai is here to guide you.
+              Unleashing the Power of Full Stack AI: Expert Guidance at Your
+              Fingertips.
             </h2>
           </Col>
           <Col md={5} xl={6}>
@@ -39,7 +42,7 @@ const Main = () => {
             >
               {" "}
               <div>
-                We provide state of the art solutions for AI applications.
+                Experience the future with our cutting-edge AI solutions!
               </div>
             </Col>
           </Col>
@@ -51,8 +54,9 @@ const Main = () => {
             >
               {" "}
               <div>
-                We provide complete web based solution using MERN (Mongo,
-                Express, React, and Nodejs) stack
+                Transform Your Web Experience with Our MERN Stack Solutions.
+                Experience Seamless Integration with Mongo, Express, React, and
+                Nodejs
               </div>
             </Col>
           </Col>
@@ -63,7 +67,7 @@ const Main = () => {
               xl={9}
             >
               {" "}
-              <div>We are best with Python based solutions</div>
+              <div>Achieve unparalleled success with our Python expertise</div>
             </Col>
           </Col>
         </Row>
