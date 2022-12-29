@@ -39,6 +39,7 @@ import BoxPlot from "./pages/d3example/BoxPlot";
 import CountryInformation from "./pages/reactjsdemos/CountryInformation";
 import ToolTips from "./pages/d3example/ToolTips";
 import ShoppingCart from "./pages/reactjsdemos/ShoppingCart";
+import OpenAIImage from "./pages/machinelearning/OpenAIImage";
 
 const App = () => {
   return (
@@ -84,6 +85,7 @@ const App = () => {
         <Route path="/countries" element={<CountryInformation />} />
         <Route path="/templatetooltips" element={<ToolTips />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/openaiimage" element={<OpenAIImage />} />
       </Routes>
       {/* <Footer /> */}
     </>

@@ -79,12 +79,13 @@ const MachineLearning = () => {
                 description={"Selfie Segmentation example"}
                 link={"/selfeisegmentation"}
               />
-              {/* <Item
-                key={"Text Toxicity"}
-                title={"Text Toxicity"}
-                description={"SToxicity classifier"}
-                link={"/toxicityclassifier"}
-              /> */}
+
+              <Item
+                key={"OpenAiImage"}
+                title={"OpenAiImage"}
+                description={"generate the image from the text"}
+                link={"/openaiimage"}
+              />
             </Row>
           </Col>
         </Row>
