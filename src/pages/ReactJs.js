@@ -144,6 +144,12 @@ const ReactJs = () => {
                 description={"ShoppingCart Example"}
                 link={"/shoppingcart"}
               />
+              <Item
+                key={"react-list-drag_drop"}
+                title={"React List Drag Drop Example"}
+                description={"React List Drag Drop Example"}
+                link={"/reactdragdrop"}
+              />
             </Row>
           </Col>
         </Row>
