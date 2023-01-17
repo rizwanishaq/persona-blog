@@ -150,6 +150,12 @@ const ReactJs = () => {
                 description={"React List Drag Drop Example"}
                 link={"/reactdragdrop"}
               />
+              <Item
+                key={"ColorMapD3"}
+                title={"Color map d3 example"}
+                description={"Color map example d3"}
+                link={"/colormapd3"}
+              />
             </Row>
           </Col>
         </Row>

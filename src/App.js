@@ -41,6 +41,7 @@ import ToolTips from "./pages/d3example/ToolTips";
 import ShoppingCart from "./pages/reactjsdemos/ShoppingCart";
 import OpenAIImage from "./pages/machinelearning/OpenAIImage";
 import ReactTodoDrag from "./pages/reactjsdemos/ReactTodoDrag";
+import ColorMapD3 from "./pages/d3example/ColorMapD3";
 
 const App = () => {
   return (
@@ -88,6 +89,7 @@ const App = () => {
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/openaiimage" element={<OpenAIImage />} />
         <Route path="/reactdragdrop" element={<ReactTodoDrag />} />
+        <Route path="/colormapd3" element={<ColorMapD3 />} />
       </Routes>
       {/* <Footer /> */}
     </>
