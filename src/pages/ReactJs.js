@@ -156,6 +156,12 @@ const ReactJs = () => {
                 description={"Color map example d3"}
                 link={"/colormapd3"}
               />
+              <Item
+                key={"BarChartD3"}
+                title={"BarChartD3 example"}
+                description={"BarChartD3 example from youtube video"}
+                link={"/barchartd3"}
+              />
             </Row>
           </Col>
         </Row>
