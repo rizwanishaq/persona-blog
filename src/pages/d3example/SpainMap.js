@@ -27,7 +27,7 @@ const SpainMap = () => {
       const countryShapes = feature(data, data.objects.ESP_adm2);
       countryShapes.features.shift();
       const colorScale = scaleOrdinal(schemeCategory10);
-      console.log()
+      console.log();
 
       svg
         .selectAll("path")
@@ -41,14 +41,14 @@ const SpainMap = () => {
         .attr("fill", (d) => colorScale(d.properties.NAME_1))
         .attr("d", (d) => pathGenerator(d))
         .append("title")
-        .text((d) => d.properties.NAME_1);
+        .text((d) => d.properties.NAME_2);
 
       svg
         .selectAll("text")
         .data(countryShapes.features)
         .enter()
         .append("text")
-        .text((d) => d.properties.NAME_1)
+        .text((d) => d.properties.NAME_2)
         .attr("x", (d) => pathGenerator.centroid(d)[0])
         .attr("y", (d) => pathGenerator.centroid(d)[1])
         .attr("text-anchor", "middle")
