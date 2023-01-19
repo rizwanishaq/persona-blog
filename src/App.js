@@ -45,6 +45,7 @@ import ColorMapD3 from "./pages/d3example/ColorMapD3";
 import BarChart from "./pages/d3example/BarChart";
 import SpainMap from "./pages/d3example/SpainMap";
 import Temperature from "./pages/d3example/Temperature";
+import ZoomAndDragMap from "./pages/d3example/ZoomAndDragMap";
 
 const App = () => {
   return (
@@ -96,6 +97,7 @@ const App = () => {
         <Route path="/barchartd3" element={<BarChart />} />
         <Route path="/spainmap" element={<SpainMap />} />
         <Route path="/temperature" element={<Temperature />} />
+        <Route path="/zoomanddragmap" element={<ZoomAndDragMap />} />
       </Routes>
       {/* <Footer /> */}
     </>

@@ -174,6 +174,12 @@ const ReactJs = () => {
                 description={"TemperatureExample using d3"}
                 link={"/temperature"}
               />
+              <Item
+                key={"ZoomAndDragMap"}
+                title={"ZoomAndDragMap example"}
+                description={"ZoomAndDragMap example using d3"}
+                link={"/zoomanddragmap"}
+              />
             </Row>
           </Col>
         </Row>
