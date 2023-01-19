@@ -27,7 +27,6 @@ const SpainMap = () => {
       const countryShapes = feature(data, data.objects.ESP_adm2);
       countryShapes.features.shift();
       const colorScale = scaleOrdinal(schemeCategory10);
-      console.log();
 
       svg
         .selectAll("path")
@@ -55,6 +54,8 @@ const SpainMap = () => {
         .attr("font-size", "8px");
     };
     get_data();
+    // eslint-disable-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

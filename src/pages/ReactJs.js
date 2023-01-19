@@ -168,6 +168,12 @@ const ReactJs = () => {
                 description={"SpainMap example from d3"}
                 link={"/spainmap"}
               />
+              <Item
+                key={"TemperatureExample"}
+                title={"Temperature Example"}
+                description={"TemperatureExample using d3"}
+                link={"/temperature"}
+              />
             </Row>
           </Col>
         </Row>
