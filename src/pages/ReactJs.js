@@ -180,6 +180,12 @@ const ReactJs = () => {
                 description={"ZoomAndDragMap example using d3"}
                 link={"/zoomanddragmap"}
               />
+              <Item
+                key={"CosineWave"}
+                title={"CosineWave Example"}
+                description={"CosineWave example using d3"}
+                link={"/cosinewave"}
+              />
             </Row>
           </Col>
         </Row>
