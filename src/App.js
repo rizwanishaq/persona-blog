@@ -47,6 +47,7 @@ import SpainMap from "./pages/d3example/SpainMap";
 import Temperature from "./pages/d3example/Temperature";
 import ZoomAndDragMap from "./pages/d3example/ZoomAndDragMap";
 import CosineWave from "./pages/d3example/CosineWave";
+import TensorflowJSPart1 from "./pages/blogs/TensorflowJSPart1";
 
 const App = () => {
   return (
@@ -100,6 +101,7 @@ const App = () => {
         <Route path="/temperature" element={<Temperature />} />
         <Route path="/zoomanddragmap" element={<ZoomAndDragMap />} />
         <Route path="/cosinewave" element={<CosineWave />} />
+        <Route path="/tfseries1" element={<TensorflowJSPart1 />} />
       </Routes>
       {/* <Footer /> */}
     </>

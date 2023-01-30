@@ -44,10 +44,10 @@ const Blogs = () => {
           <Col className="mt-10">
             <Row className="justify-content-center text-center text-md-left">
               <Item
-                key={"D3Example"}
-                title={"D3Example"}
-                description={"Expermenting with d3 and reactjs"}
-                link={"/d3example"}
+                key={"TensorflowJsExample"}
+                title={"TensorflowJs-Series-part-1"}
+                description={"TensorflowJs-Series-part-1"}
+                link={"/tfseries1"}
               />
             </Row>
           </Col>
