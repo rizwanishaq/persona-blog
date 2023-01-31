@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { csv, autoType } from "d3";
+import {
+  csv,
+  autoType,
+  select,
+  scaleLinear,
+  axisBottom,
+  axisLeft,
+  scaleOrdinal,
+} from "d3";
 import * as tf from "@tensorflow/tfjs";
 import { Button, Container } from "react-bootstrap";
 import DataTable from "react-data-table-component";
@@ -47,6 +55,17 @@ const DrawTable = ({ data }) => {
   );
 };
 
+const useClassData = ({ data, species }) => {
+  const [classData, setClassData] = useState(null);
+  useEffect(() => {
+    if (data) {
+      const filteredData = data.filter((d) => d.species === species);
+      setClassData(filteredData);
+    }
+  }, [data, species]);
+  return classData;
+};
+
 const useGetData = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -68,8 +87,70 @@ const useGetData = () => {
   return data;
 };
 
+const SpeciesDraw = ({ data }) => {
+  const ref = useRef();
+  const margin = { top: 10, right: 30, bottom: 30, left: 60 };
+  const width = 460 - margin.left - margin.right;
+  const height = 400 - margin.top - margin.bottom;
+
+  useEffect(() => {
+    const svg = select(ref.current)
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // Add X axis
+    const x = scaleLinear().domain([10, 30]).range([0, width]);
+    const xAxis = svg
+      .append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(axisBottom(x));
+
+    // Add Y axis
+    const y = scaleLinear().domain([10, 35]).range([height, 0]);
+    svg.append("g").call(axisLeft(y));
+
+    const color = scaleOrdinal()
+      .domain(["male", "female"])
+      .range(["#440154ff", "#21908dff"]);
+
+    const scatter = svg.append("g");
+
+    // Add circles
+    scatter
+      .selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("cx", (d) => x(+d.bill_depth_mm))
+      .attr("cy", (d) => y(+d.bill_depth_mm))
+      .attr("r", 8)
+      .style("fill", (d) => color(d.sex))
+      .style("opacity", 0.5);
+  }, [data]);
+
+  return (
+    <Container>
+      <svg
+        ref={ref}
+        style={{
+          marginLeft: "50px",
+        }}
+        preserveAspectRatio="none"
+      />
+    </Container>
+  );
+};
+
 const TensorflowJSPart1 = () => {
   const data = useGetData();
+  const species = {
+    Adelie: useClassData({ data: data, species: "Adelie" }),
+    Gentoo: useClassData({ data: data, species: "Gentoo" }),
+    Chinstrap: useClassData({ data: data, species: "Chinstrap" }),
+  };
+
   return (
     <Container className="mt-2">
       <Accordion>
@@ -78,6 +159,10 @@ const TensorflowJSPart1 = () => {
             Palmer Penguins data in tabular form
           </Accordion.Header>
           <Accordion.Body>{data && <DrawTable data={data} />}</Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>D3 Graph</Accordion.Header>
+          <Accordion.Body>{data && <SpeciesDraw data={data} />}</Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </Container>
