@@ -101,19 +101,25 @@ const SpeciesDraw = ({ data }) => {
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // Add X axis
-    const x = scaleLinear().domain([10, 30]).range([0, width]);
+    const x = scaleLinear().domain([160, 250]).range([0, width]);
     const xAxis = svg
       .append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(axisBottom(x));
+    xAxis
+      .append("text")
+      .attr("y", 80)
+      .attr("x", width / 2)
+      .attr("fill", "black")
+      .text("something");
 
     // Add Y axis
-    const y = scaleLinear().domain([10, 35]).range([height, 0]);
+    const y = scaleLinear().domain([2500, 7000]).range([height, 0]);
     svg.append("g").call(axisLeft(y));
 
     const color = scaleOrdinal()
-      .domain(["male", "female"])
-      .range(["#440154ff", "#21908dff"]);
+      .domain(["Adelie", "Gentoo", "Chinstrap"])
+      .range(["#440154ff", "#21908dff", "#fde725ff"]);
 
     const scatter = svg.append("g");
 
@@ -123,10 +129,10 @@ const SpeciesDraw = ({ data }) => {
       .data(data)
       .enter()
       .append("circle")
-      .attr("cx", (d) => x(+d.bill_depth_mm))
-      .attr("cy", (d) => y(+d.bill_depth_mm))
-      .attr("r", 8)
-      .style("fill", (d) => color(d.sex))
+      .attr("cx", (d) => x(+d.flipper_length_mm))
+      .attr("cy", (d) => y(+d.body_mass_g))
+      .attr("r", 3)
+      .style("fill", (d) => color(d.species))
       .style("opacity", 0.5);
   }, [data]);
 
