@@ -213,8 +213,12 @@ const useModel = () => {
   useEffect(() => {
     const model_ = tf.sequential();
     model_.add(
-      tf.layers.dense({ units: 6, inputShape: [4], activation: "relu" })
+      tf.layers.dense({ units: 16, inputShape: [4], activation: "relu" })
     );
+    model_.add(tf.layers.dense({ units: 32, activation: "relu" }));
+    model_.add(tf.layers.dense({ units: 64, activation: "relu" }));
+    model_.add(tf.layers.dense({ units: 32, activation: "relu" }));
+    model_.add(tf.layers.dense({ units: 16, activation: "relu" }));
     model_.add(tf.layers.dense({ units: 3, activation: "softmax" }));
     model_.compile({
       optimizer: "sgd",
@@ -232,15 +236,15 @@ const TrainModel = ({ model, xtrain, ytrain, xtest, ytest }) => {
   const [acc, setAcc] = useState([]);
   const handleClick = async () => {
     await model.fit(xtrain, ytrain, {
-      batchSize: 4,
+      batchSize: 16,
       epochs: 100000,
       verbose: true,
-      validationSplit: 0.15,
+      validationSplit: 0.05,
       callbacks: {
         onBatchEnd: async (batch, logs) => {
-          //   console.log(batch, logs);
-          //   setLoss((prevloss) => [...prevloss, +logs["loss"].toFixed(2)]);
-          //   setAcc((prevacc) => [...prevacc, +logs["acc"].toFixed(2)]);
+          console.log(batch, logs);
+          // setLoss((prevloss) => [...prevloss, +logs["loss"].toFixed(2)]);
+          // setAcc((prevacc) => [...prevacc, +logs["acc"].toFixed(2)]);
         },
         onEpochEnd: async (epoch, logs) => {
           setLoss((prevloss) => [...prevloss, +logs["loss"].toFixed(2)]);
