@@ -48,6 +48,8 @@ import Temperature from "./pages/d3example/Temperature";
 import ZoomAndDragMap from "./pages/d3example/ZoomAndDragMap";
 import CosineWave from "./pages/d3example/CosineWave";
 import TensorflowJSPart1 from "./pages/blogs/TensorflowJSPart1";
+import FitnessTrack from "./pages/d3example/FitnessTrack";
+import StableDiffusion from "./pages/machinelearning/StableDiffusion";
 
 const App = () => {
   return (
@@ -102,6 +104,11 @@ const App = () => {
         <Route path="/zoomanddragmap" element={<ZoomAndDragMap />} />
         <Route path="/cosinewave" element={<CosineWave />} />
         <Route path="/tfseries1" element={<TensorflowJSPart1 />} />
+        <Route path="/fitnesstrack" element={<FitnessTrack />} />
+        <Route
+          path="/huggingfacestable-diffusion-2"
+          element={<StableDiffusion />}
+        />
       </Routes>
       {/* <Footer /> */}
     </>

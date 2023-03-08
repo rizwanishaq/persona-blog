@@ -186,6 +186,12 @@ const ReactJs = () => {
                 description={"CosineWave example using d3"}
                 link={"/cosinewave"}
               />
+              <Item
+                key={"FitnessTrack"}
+                title={"FitnessTrack Example"}
+                description={"FitnessTrack example using d3"}
+                link={"/fitnesstrack"}
+              />
             </Row>
           </Col>
         </Row>

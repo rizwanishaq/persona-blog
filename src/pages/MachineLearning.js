@@ -86,6 +86,13 @@ const MachineLearning = () => {
                 description={"generate the image from the text"}
                 link={"/openaiimage"}
               />
+
+              <Item
+                key={"HuggingFaceImageGeneration"}
+                title={"HuggingFace stable diffusion image generation"}
+                description={"HuggingFace stable diffusion image generation"}
+                link={"/huggingfacestable-diffusion-2"}
+              />
             </Row>
           </Col>
         </Row>
