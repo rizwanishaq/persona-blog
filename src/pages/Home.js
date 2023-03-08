@@ -10,7 +10,7 @@ const Home = () => {
   // console.log(deviceInformation);
 
   // console.log(deviceInformation.geoIp.toString());
-  console.log(process.env.REACT_APP_HUGGING_FACE_API);
+  // console.log(process.env.REACT_APP_HUGGING_FACE_API);
 
   return (
     <>
