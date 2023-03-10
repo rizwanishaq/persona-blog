@@ -50,6 +50,7 @@ import CosineWave from "./pages/d3example/CosineWave";
 import TensorflowJSPart1 from "./pages/blogs/TensorflowJSPart1";
 import FitnessTrack from "./pages/d3example/FitnessTrack";
 import StableDiffusion from "./pages/machinelearning/StableDiffusion";
+import ChatGPTDemo from "./pages/machinelearning/ChatGPTDemo";
 
 const App = () => {
   return (
@@ -109,6 +110,7 @@ const App = () => {
           path="/huggingfacestable-diffusion-2"
           element={<StableDiffusion />}
         />
+        <Route path="/chatgptdemo" element={<ChatGPTDemo />} />
       </Routes>
       {/* <Footer /> */}
     </>

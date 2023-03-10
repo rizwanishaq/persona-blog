@@ -88,10 +88,17 @@ const MachineLearning = () => {
               />
 
               <Item
-                key={"HuggingFaceImageGeneration"}
+                key={"HuggingFaceImageGeneration1"}
                 title={"HuggingFace stable diffusion image generation"}
                 description={"HuggingFace stable diffusion image generation"}
                 link={"/huggingfacestable-diffusion-2"}
+              />
+
+              <Item
+                key={"ChatGPTDemo"}
+                title={"ChatGPTDemo Example"}
+                description={"ChatGPTDemo"}
+                link={"/chatgptdemo"}
               />
             </Row>
           </Col>

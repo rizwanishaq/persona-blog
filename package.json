@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
     "@emailjs/browser": "^3.7.0",
     "@huggingface/inference": "^1.5.2",
     "@mediapipe/camera_utils": "^0.3.1640029074",
