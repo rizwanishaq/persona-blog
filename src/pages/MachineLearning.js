@@ -100,6 +100,12 @@ const MachineLearning = () => {
                 description={"ChatGPTDemo"}
                 link={"/chatgptdemo"}
               />
+              <Item
+                key={"TransformerTranslation"}
+                title={"Transformer translation example"}
+                description={"transformer translation example"}
+                link={"/transformertranslation"}
+              />
             </Row>
           </Col>
         </Row>

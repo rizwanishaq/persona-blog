@@ -51,6 +51,7 @@ import TensorflowJSPart1 from "./pages/blogs/TensorflowJSPart1";
 import FitnessTrack from "./pages/d3example/FitnessTrack";
 import StableDiffusion from "./pages/machinelearning/StableDiffusion";
 import ChatGPTDemo from "./pages/machinelearning/ChatGPTDemo";
+import TransFormer from "./pages/machinelearning/TransFormer";
 
 const App = () => {
   return (
@@ -111,6 +112,7 @@ const App = () => {
           element={<StableDiffusion />}
         />
         <Route path="/chatgptdemo" element={<ChatGPTDemo />} />
+        <Route path="/transformertranslation" element={<TransFormer />} />
       </Routes>
       {/* <Footer /> */}
     </>
